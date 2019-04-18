@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ProfileFragment">
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:id="@+id/profileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+            <ImageView
+                    android:id="@+id/photoIV"
+                    android:layout_width="@dimen/standard_width"
+                    android:layout_height="@dimen/standard_width"
+                    android:paddingBottom="8dp"
+                    android:src="@drawable/default_pic"/>
+
+            <android.support.design.widget.TextInputLayout
+                    android:id="@+id/nameTIL"
+                    android:layout_width="@dimen/standard_width"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/photoIV"
+                    android:paddingBottom="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                        android:id="@+id/nameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_name"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                    android:id="@+id/emailTIL"
+                    android:layout_width="@dimen/standard_width"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameTIL"
+                    android:paddingBottom="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                        android:id="@+id/emailET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_email"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                    android:id="@+id/ageTIL"
+                    android:layout_width="@dimen/standard_width"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emailTIL"
+                    android:paddingBottom="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                        android:id="@+id/ageET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_age"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                    android:id="@+id/radio1Layout"
+                    android:layout_width="@dimen/standard_width"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ageTIL"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/genderTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/standard_height"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="@string/hint_gender"/>
+
+                <RadioGroup
+                        android:id="@+id/radioGroup1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/standard_height"
+                        android:layout_weight="2"
+                        android:paddingBottom="8dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                            android:id="@+id/radioMan1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_man"/>
+
+                    <RadioButton
+                            android:id="@+id/radioWoman1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_woman"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/radio2Layout"
+                    android:layout_width="@dimen/standard_width"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/radio1Layout"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/preferredGenderTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/standard_height"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="@string/hint_preferred_gender"/>
+
+                <RadioGroup
+                        android:id="@+id/radioGroup2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/standard_height"
+                        android:layout_weight="2"
+                        android:paddingBottom="8dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                            android:id="@+id/radioMan2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_man"/>
+
+                    <RadioButton
+                            android:id="@+id/radioWoman2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_woman"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/applyButton"
+                    android:layout_width="@dimen/standard_width"
+                    android:layout_height="@dimen/standard_height"
+                    android:layout_below="@id/radio2Layout"
+                    style="@style/StandardButton"
+                    android:text="@string/button_apply"/>
+
+            <Button
+                    android:id="@+id/signoutButton"
+                    android:layout_width="@dimen/standard_width"
+                    android:layout_height="@dimen/standard_height"
+                    android:layout_below="@id/applyButton"
+                    style="@style/StandardButtonGrey"
+                    android:text="@string/button_sign_out"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+            android:id="@+id/progressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#aaaaaaaa">
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
